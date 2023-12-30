@@ -116,13 +116,13 @@ print("all samples are save in folder")
 
 |Iter 1 |Iter 5|Iter 10
 |-|-|-
-![sample-1](https://hackmd.io/_uploads/HklEK5pvp.png)|![sample-5](https://hackmd.io/_uploads/ryRrqqpva.png)|![sample-10](https://hackmd.io/_uploads/SJHI95aDa.png)
+![sample-1](result/sample-1.png)|![sample-5](result/sample-5.png)|![sample-10](result/sample-10.png)
 
 
 |Iter 10 |Iter 50|Iter 100
 |-|-|-
-![sample-10](https://hackmd.io/_uploads/SJHI95aDa.png)|![sample-50](https://hackmd.io/_uploads/H1bF59aPT.png)|![sample-100](https://hackmd.io/_uploads/S1DF55awT.png)
+![sample-10](result/sample-10.png)|![sample-50](result/sample-50.png)|![sample-100](result/sample-100.png)
 
 |Iter 100 |Iter 500|Iter 700
 |-|-|-
-![sample-100](https://hackmd.io/_uploads/S1DF55awT.png)|![sample-500](https://hackmd.io/_uploads/Hkloq9aPa.png)|![sample-700](https://hackmd.io/_uploads/B1Ssq5TDT.png)
+![sample-100](result/sample-100.png)|![sample-500](result/sample-500.png)|![sample-700](result/sample-700.png)
