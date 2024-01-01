@@ -114,6 +114,9 @@ print("all samples are save in folder")
 
 ## Result  
 
+Platform: RTX A4500  
+Training time: 52hr
+
 |Iter 1 |Iter 5|Iter 10
 |-|-|-
 ![sample-1](result/sample-1.png)|![sample-5](result/sample-5.png)|![sample-10](result/sample-10.png)
@@ -126,3 +129,8 @@ print("all samples are save in folder")
 |Iter 100 |Iter 500|Iter 700
 |-|-|-
 ![sample-100](result/sample-100.png)|![sample-500](result/sample-500.png)|![sample-700](result/sample-700.png)
+
+GPU memory 
+|amp |no amp
+|-|-
+|7486MB |9130MB
