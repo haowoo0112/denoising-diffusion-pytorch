@@ -134,3 +134,8 @@ GPU memory
 |amp |no amp
 |-|-
 |7486MB |9130MB
+
+return_all_timesteps
+|step 0 |step 50 |step 100 |step 150 |step 200 |step 250 
+|-|-|-|-|-|-
+|![](result/sample_step/output__image_0_0%20steps.png) |![](result/sample_step/output__image_0_50%20steps.png)|![](result/sample_step/output__image_0_100%20steps.png)|![](result/sample_step/output__image_0_150%20steps.png)|![](result/sample_step/output__image_0_200%20steps.png)|![](result/sample_step/output__image_0_250%20steps.png)

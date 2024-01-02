@@ -29,9 +29,9 @@ trainer = Trainer(
 	amp=True
 )
 
-trainer.load(100) # load model-4.pt # load the checkpoint
-
-sampled_images = diffusion.sample(batch_size=8)
+trainer.load(700) # load model-700.pt # load the checkpoint
+return_all_timesteps = True
+sampled_images = diffusion.sample(batch_size=1, return_all_timesteps = return_all_timesteps)
 
 samples_root = r"./samples"
 os.makedirs(samples_root , exist_ok=True)
@@ -40,8 +40,16 @@ len_samples = len(os.listdir(samples_root))
 for i in range(sampled_images.size(0)):
 
 	current_image_tensor = sampled_images [i]
-	current_image = Image.fromarray((current_image_tensor.cpu().permute(1, 2, 0).numpy() * 255).astype('uint8'))
-	file_name = f"output__image_{i + len_samples}.png"
-	current_image.save(os.path.join(os.getcwd(),"samples/" + file_name))
+	
+	if return_all_timesteps == True:
+		for j in range(current_image_tensor.size(0) - 1, -1, -1):
+			current_image_step_tensor = current_image_tensor [j]
+			current_image = Image.fromarray((current_image_step_tensor.cpu().permute(1, 2, 0).numpy() * 255).astype('uint8'))
+			file_name = f"output__image_{i + len_samples}_{j} steps.png"
+			current_image.save(os.path.join(os.getcwd(),"samples/" + file_name))
+	else:
+		current_image = Image.fromarray((current_image_tensor.cpu().permute(1, 2, 0).numpy() * 255).astype('uint8'))
+		file_name = f"output__image_{i + len_samples}.png"
+		current_image.save(os.path.join(os.getcwd(),"samples/" + file_name))
 
 print("all samples are save in folder")
